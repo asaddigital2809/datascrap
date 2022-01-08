@@ -1,28 +1,17 @@
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+
 class DataController extends GetxController{
   List<String> name = [];
-  List<String> value = [];
-  String? date ;
-  double height=Get.height;
-  double width=Get.width;
-  bool isDataLoading = true;
-  @override
-  void onInit(){
-    if (width> 600) {
-      height = width;
-    } else if (height< 600) {
-      height = 650;
-      width = 370;
-    }
-  }
+  List<String> location = [];
+
+
   void addName(String text){
     name.add(text);
     update();
   }
-  void addValue(String text){
-    value.add(text);
+  void addLocation(String text){
+    location.add(text);
     update();
-  }
-  void setDate(String text){
-    date = text;
   }
 }
